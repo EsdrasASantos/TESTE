@@ -1,0 +1,23 @@
+*{
+    font-size: 15px;
+    font-family: 'Monserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.tabela{
+    padding: 10px 15px;
+}
+
+.btn__adicionar, .btn__alt, .btn__del{
+    background-color: brown;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
+    outline: none;
+    padding: 10px 15px;
+}
