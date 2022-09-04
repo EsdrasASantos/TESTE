@@ -34,11 +34,11 @@ function adicionar(){/* */
         id:data.id,
         name:value
     })
-    render();/*Sempre que uma alteração é feita deve-se chamar a função render*/
+    render();
     salvar()
 }
 
-function editar(id, name){/*pede o id e nome*/
+function editar(id, name){
 if(!(name = prompt('Informe o nome',name))) return;
    data.list = data.list.map(item => {
     if(item.id === id)item.name = name;

@@ -1,0 +1,11 @@
+A interface é bem simples com apenas uma tabela, um tbody carregado via JavaScript e um botão, na parte de Css foram feitas mudanças mínimas, utilizando reset.css e posteriormente adicionando alguma estilização nos botões e espaçamentos.
+
+Partindo para o JavaScript a 'var data' recebe o localStorage como banco dv;bnm,.C|XZe dados para o armazenamento dos links e retorna o que tiver no memória, a função 'render()' será a responsável por efetuar as alterações na página, sendo necessária estar presente em todas as funções com excessão de uma, função salvar(), de inicio é criada a 'const tbody' e capturado o tbody em seguida a const tbody é 'esvaziada' caso já hajam registros indesejados e depois a lista criada na var data é percorrida o elemento tr é criado, definindo oque deve aparecer em cada linha e depois esse tr é adicionado ao tbody.
+
+A função 'adicionar()' que é alocada no botão adicionar tem a função de primeiramente iniciar o prompt vazio e depois pergunta ao prompt qual o valor que deseja salvar caso não seja adicionado algum valor a função é cancelada caso contrário o item escrito será adicionado a 'var data'
+
+A função 'apagar()' que recebe o argumento id e é alocada no botão apagar tem o intuito de primeiramente confirmar com o usuário se querde fato excluir aquele registro, em seguida o conteudo da 'var data' é filtrado e caso o item a ser percorrido seja diferente dos informado ele se mantem nos registros caso contrário ele sai.
+
+A função 'editar()' que recebe o argumento id e nome e é alocada no botão editar onde os dois parametros '(${item.id}, "${item.name}")', recebe o valor atual e posteriormente recebe o valor informado, é feita uma verificação para o caso do novo valor informado ser o mesmo do valor atual retornando o mesmo valor.
+
+Tratando-se da função 'salvar()' que estará presente nas três funções anteriores que fazem alterações nos registros, primeiramente é criada uma constante para salvar o nome do 'banco', depois na função é setado o nome e logo após pega o conteúdo(objeto) e transformalo em json e string e passando a lista onde os itens são armazenados. A constante ls pega o conteudo presente no banco e após atribuido ao data, caso a const ls tenha conteúdo retorna o conteúdo, caso contrário retorna o valor padrão definido.
